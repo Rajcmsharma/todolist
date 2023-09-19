@@ -1,0 +1,21 @@
+#root{
+  min-height: 100vh;
+}
+footer h4 {
+    color: pink;
+    font-family: cursive;
+}
+
+footer {
+
+    margin-top:36vh;
+
+    width: 100vw;
+    border: 2px solid pink;
+   
+    
+
+}
+
+
+  
