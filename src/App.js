@@ -7,9 +7,7 @@ import About from './mycomponents/about';
 import { useState, useEffect } from "react";
 import {
   HashRouter as Router,
-  Switch,
   Route,
-  Link,
   Routes
 } from "react-router-dom";
 
