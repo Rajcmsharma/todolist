@@ -6,7 +6,7 @@ import Addtodos from './mycomponents/addtodos';
 import About from './mycomponents/about';
 import { useState, useEffect } from "react";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Link,
@@ -68,19 +68,24 @@ function App() {
       
 
 
-      <Header title="Todos List" searchbar={false} />
+      
 
         <Routes>
           <Route path='/' element={
           <>
-           
+            <Header title="Todos List" searchbar={false} />
             <Addtodos addtodonow={addtodonow} />
             <Todos todos={todos} onDelete={onDelete} />
+            <Footer/>
           </>
           }>
           </Route>
           <Route path='/about' element={
+            <>
+            <Header title="Todos List" searchbar={false} />
             <About/>
+            <Footer/>
+            </>
           }>
           </Route>
         
@@ -88,7 +93,7 @@ function App() {
         
         </Routes>
 
-      <Footer/>
+      
 
       
     </Router>
