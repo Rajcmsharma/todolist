@@ -3,8 +3,13 @@ html
   overflow-x: hidden;
 }
 body{
-background: linear-gradient(to right, pink,cyan);
+background: linear-gradient(to top right, pink,cyan);
 }
 nav{
   background: linear-gradient(to right, pink,cyan);
+  border-bottom:2px solid black;
+}
+nav:hover{
+  background: linear-gradient(to left, grey,yellow);
+
 }
