@@ -71,14 +71,14 @@ function App() {
   return (
     <Router>
       
-
+      <Header title="Todos List" searchbar={false} />
 
       
 
         <Routes>
           <Route path='/' element={
           <>
-            <Header title="Todos List" searchbar={false} />
+          
             <Addtodos addtodonow={addtodonow} />
             <Todos todos={todos} onDelete={onDelete} editit={editit}/>
             <Footer/>
@@ -87,7 +87,7 @@ function App() {
           </Route>
           <Route path='/about' element={
             <>
-            <Header title="Todos List" searchbar={false} />
+           
             <About/>
             <Footer/>
             </>
