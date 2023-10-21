@@ -40,7 +40,7 @@ function App() {
   function onDelete(todo) {
     settodos(
       todos.filter((e) => {
-        if (e.desc !== todo.desc) {
+        if (e.title !== todo.title) {
           return true;
         }
         else {
