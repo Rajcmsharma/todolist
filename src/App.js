@@ -15,6 +15,7 @@ function App() {
 
   let initialtodo = [];
   if (localStorage.getItem('todos') !== null) {
+    
     initialtodo = JSON.parse(localStorage.getItem('todos'));
   }
   // function to add todos 
@@ -24,7 +25,7 @@ function App() {
     let d = (document.getElementById('inputdesc').value);
     if (t && d) {
 
-      settodos([...todos, { sno: todos.length, title: t, desc: d }]);
+      settodos([...todos, { title: t, desc: d }]);
       document.getElementById('inputtitle').value = "";
       document.getElementById('inputdesc').value = "";
 
@@ -39,7 +40,7 @@ function App() {
   function onDelete(todo) {
     settodos(
       todos.filter((e) => {
-        if (e.sno !== todo.sno) {
+        if (e.title !== todo.title) {
           return true;
         }
         else {
@@ -50,14 +51,20 @@ function App() {
     );
 
   }
-
+  //function to edit todos
+  let editit=(ele)=>{
+    document.getElementById('inputtitle').value = ele.title;
+    document.getElementById('inputdesc').value = ele.desc;
+    onDelete(ele);
+  }
   // declaring todos
   const [todos, settodos] = useState(initialtodo);
+
   // todos declaration ends
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos))
   }
-    , [todos]
+  , [todos]
   )
 
 
@@ -73,7 +80,7 @@ function App() {
           <>
             <Header title="Todos List" searchbar={false} />
             <Addtodos addtodonow={addtodonow} />
-            <Todos todos={todos} onDelete={onDelete} />
+            <Todos todos={todos} onDelete={onDelete} editit={editit}/>
             <Footer/>
           </>
           }>

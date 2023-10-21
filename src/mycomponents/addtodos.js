@@ -5,7 +5,7 @@ export default function Addtodos(props) {
 
   return (
     <div>
-      <h2 className='text-center my-5 '>Add todos from here</h2>
+      <h2 className='text-center my-5 '>ADD TO-DOs</h2>
       <form className="row g-2 mx-3"  onKeyDown={(e)=>{if(e.key === 'Enter'){props.addtodonow(e)}}} >
       {/* add title */}
         <div className="col-12">

@@ -12,7 +12,7 @@ function Todos(props) {
         props.todos.map((todo) => {
           return (
 
-            <Todoitem key={todo.sno} todo={todo} onDelete={props.onDelete} />
+            <Todoitem key={todo.title} todo={todo} onDelete={props.onDelete} editit={props.editit} />
 
           );
         }
