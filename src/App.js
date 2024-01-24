@@ -55,6 +55,7 @@ function App() {
   let editit = (ele) => {
     document.getElementById('inputtitle').value = ele.title;
     document.getElementById('inputdesc').value = ele.desc;
+    window.scrollTo(0,0);
     onDelete(ele);
   }
   // declaring todos
