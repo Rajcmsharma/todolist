@@ -15,7 +15,7 @@ function App() {
 
   let initialtodo = [];
   if (localStorage.getItem('todos') !== null) {
-    
+
     initialtodo = JSON.parse(localStorage.getItem('todos'));
   }
   // function to add todos 
@@ -52,7 +52,7 @@ function App() {
 
   }
   //function to edit todos
-  let editit=(ele)=>{
+  let editit = (ele) => {
     document.getElementById('inputtitle').value = ele.title;
     document.getElementById('inputdesc').value = ele.desc;
     onDelete(ele);
@@ -64,43 +64,45 @@ function App() {
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos))
   }
-  , [todos]
+    , [todos]
   )
 
 
   return (
     <Router>
-      
+
       <Header title="Todos List" searchbar={false} />
 
-      
 
-        <Routes>
-          <Route path='/' element={
+
+      <Routes>
+        <Route path='/' element={
           <>
-          
+
             <Addtodos addtodonow={addtodonow} />
-            <Todos todos={todos} onDelete={onDelete} editit={editit}/>
-            <Footer/>
+            <Todos todos={todos} onDelete={onDelete} editit={editit} />
+
           </>
-          }>
-          </Route>
-          <Route path='/about' element={
-            <>
-           
-            <About/>
-            <Footer/>
-            </>
-          }>
-          </Route>
-        
-        
-        
-        </Routes>
+        }>
+        </Route>
+        <Route path='/about' element={
+          <>
 
-      
+            <About />
 
+          </>
+        }>
+        </Route>
+
+
+      </Routes>
       
+      
+      <Footer />
+
+
+
+
     </Router>
 
 

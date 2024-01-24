@@ -9,12 +9,12 @@ export default function Addtodos(props) {
       <form className="row g-2 mx-3"  onKeyDown={(e)=>{if(e.key === 'Enter'){props.addtodonow(e)}}} >
       {/* add title */}
         <div className="col-12">
-          <label htmlFor="inputtitle" className="form-label">Title</label>
+          <label htmlFor="inputtitle" className="form-label">To-Do Title</label>
           <input type="text" className="form-control" id="inputtitle" placeholder="Add title here"  />
         </div>
        {/* add description */}
         <div className="col-12">
-          <label htmlFor="inputdesc">Description</label>
+          <label htmlFor="inputdesc">To-Do Description</label>
           <textarea className="form-control" placeholder="Add description here" id="inputdesc" style={{ height: "100px" }}></textarea>
         </div>
        {/* add button */}
