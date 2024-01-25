@@ -1,8 +1,7 @@
 # Advance Todo List App
 
 ## Day-Sync
-
-Description
+## Description
 
 **Welcome to Day-Sync - Your Simple and Local Todo List App!**
 
