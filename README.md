@@ -120,4 +120,4 @@ If you have any questions or suggestions, feel free to reach out to me:
 - **Email**: rajatsharmatopper@gmail.com
 - **GitHub**: [github.com/Rajcmsharma](https://github.com/Rajcmsharma)
 
-Thank you for using the Simple Todo List App! Happy task management!
+Thank you for using Day-Sync! Happy task management!
