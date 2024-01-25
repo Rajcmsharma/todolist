@@ -6,7 +6,7 @@ function Todos(props) {
  
   return (
     <div className='container'>
-      <h1 className='text-center'>Todos list</h1>
+      <h1 className='text-center'>To-Do's list</h1>
 
       {props.todos.length ?
         props.todos.map((todo) => {

@@ -23,12 +23,14 @@ function App() {
     e.preventDefault();
     let t = (document.getElementById('inputtitle').value);
     let d = (document.getElementById('inputdesc').value);
+    let i = (document.getElementById('importance').value);
+
     if (t && d) {
 
-      settodos([...todos, { title: t, desc: d }]);
+      settodos([...todos, { title: t, desc: d, imp: i }]);
       document.getElementById('inputtitle').value = "";
       document.getElementById('inputdesc').value = "";
-
+      document.getElementById('importance').value = 1;
     }
     else {
       alert('field can`t be empty');
@@ -55,7 +57,7 @@ function App() {
   let editit = (ele) => {
     document.getElementById('inputtitle').value = ele.title;
     document.getElementById('inputdesc').value = ele.desc;
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
     onDelete(ele);
   }
   // declaring todos
@@ -72,7 +74,7 @@ function App() {
   return (
     <Router>
 
-      <Header title="Todos List" searchbar={false} />
+      <Header title="Day-Sync" searchbar={false} />
 
 
 
@@ -97,8 +99,8 @@ function App() {
 
 
       </Routes>
-      
-      
+
+
       <Footer />
 
 
