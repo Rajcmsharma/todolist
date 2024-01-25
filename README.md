@@ -1,6 +1,6 @@
 # Advance Todo List App
 
-##Day-Sync
+## Day-Sync
 
 ## Description
 
