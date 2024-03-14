@@ -1,15 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Todoitem from "./todoitem";
 
 function Todos(props) {
- 
+ const [sortedtodos,setsortedtodos]=useState([]);
+ useEffect(()=>{
+  let tmp=[];
+  tmp=[...tmp,...props.todos.filter((todo)=>todo.imp==3)];
+  tmp=[...tmp,...props.todos.filter((todo)=>todo.imp==2)];
+  tmp=[...tmp,...props.todos.filter((todo)=>todo.imp==1)];
+  setsortedtodos(tmp);
+ },[props.todos])
  
   return (
     <div className='container'>
       <h1 className='text-center'>To-Do's list</h1>
 
-      {props.todos.length ?
-        props.todos.map((todo) => {
+      {sortedtodos.length ?
+        sortedtodos.map((todo) => {
           return (
 
             <Todoitem key={todo.title} todo={todo} onDelete={props.onDelete} editit={props.editit} />
